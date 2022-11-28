@@ -16,4 +16,6 @@ public interface ClientService {
     public void delete(Client client);
 
     public Optional<Client> findById(String id);
+
+    public List<Optional<Client>> getAllByStatus();
 }

@@ -14,6 +14,8 @@ public class ClientServiceImpl implements ClientService{
     @Autowired
     private ClientRepo clientRepo;
 
+    private String status="active";
+
     @Override
     public Client create(Client client) {
         return clientRepo.save(client);
@@ -31,11 +33,16 @@ public class ClientServiceImpl implements ClientService{
 
     @Override
     public void delete(Client client) {
-        clientRepo.delete(client);
+        clientRepo.save(client);
     }
 
     @Override
     public Optional<Client> findById(String id) {
         return clientRepo.findById(Long.valueOf(id));
+    }
+
+    @Override
+    public List<Optional<Client>> getAllByStatus() {
+        return clientRepo.getAllByStatus(status);
     }
 }
