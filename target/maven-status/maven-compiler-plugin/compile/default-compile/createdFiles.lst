@@ -1,0 +1,9 @@
+com\clientes\service\ClientService.class
+com\clientes\model\Client.class
+com\clientes\controller\ClientController.class
+com\clientes\dto\ClientDTO.class
+com\clientes\config\SwaggerConfig.class
+com\clientes\service\ClientServiceImpl.class
+com\clientes\exceptions\BussniesRulesException.class
+com\clientes\repository\ClientRepo.class
+com\clientes\ClientesApplication.class
